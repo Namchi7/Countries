@@ -1,0 +1,28 @@
+.container {
+    width: 95%;
+    max-width: 60rem;
+    height: 40rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.errorMsg {
+    color: rgb(197, 67, 89);
+    font-family: Roboto;
+    font-size: 5rem;
+    font-weight: 600;
+    filter: drop-shadow(0 0 10px rgba(67, 51, 53, 0.3));
+}
+
+.homeBtn {
+    background-color: rgb(197, 67, 89);
+    padding: 1rem;
+    width: fit-content;
+    color: whitesmoke;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0 0 10px rgba(67, 51, 53, 0.3));
+}
