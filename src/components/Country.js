@@ -95,7 +95,7 @@ function Country() {
     body.style.backgroundSize = "cover";
     body.style.backgroundRepeat = "no-repeat";
     body.style.backgroundPosition = "center";
-    body.style.backgroundColor = "rgb(153, 153, 153,0.25)";
+    // body.style.backgroundColor = "rgb(153, 153, 153,0.25)";
   }
 
   const path = window.location.pathname;
@@ -110,7 +110,7 @@ function Country() {
     if (country.status !== 404) {
       countryRes = resolveData(country);
       console.log(countryRes);
-      setBackgroundImage(countryRes.flag.svg);
+      // setBackgroundImage(countryRes.flag.svg);
     } else {
       navigate(`/404/${countryName}`);
     }
@@ -128,7 +128,7 @@ function Country() {
 
   return (
     <div className={styles.container}>
-      {loading === false ? (
+      {!loading ? (
         <>
           <div className={styles.firstFours}>
             <div className={styles.basicInfo}>
@@ -199,15 +199,19 @@ function Country() {
 
               <div className={styles.otherInfoTile}>
                 <div className={styles.otherInfoHeader}>
-                  Borders({countryRes.borders.length})
+                  Borders({countryRes.borders ? countryRes.borders.length : "0"}
+                  )
                 </div>
                 <div className={styles.otherInfoContent}>
                   <div className={styles.allBorders}>
                     {countryRes.borders !== null ? (
                       countryRes.borders.map((border) => (
-                        <div className={styles.border}>
-                          <Link to={`/country/${border}`}>{border}</Link>
-                        </div>
+                        <Link
+                          to={`/country/${border}`}
+                          className={styles.border}
+                        >
+                          {border}
+                        </Link>
                       ))
                     ) : (
                       <div>No Borders</div>

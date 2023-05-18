@@ -6,7 +6,7 @@ import styles from "./css/home.module.css";
 import Countries from "../assets/json/Countries2.json";
 
 function allEventListeners(setKeyword) {
-  document.body.style.backgroundImage = "none";
+  // document.body.style.backgroundImage = "none";
   const keyword = document.querySelector("[data-keyword]");
   // const resultsList = document.querySelector("[data-results-list]");
   // const results = document.querySelector("[data-results]");
@@ -46,8 +46,13 @@ function Home() {
       <h1 className={styles.searchCountry}>Search Country</h1>
 
       <div className={styles.searchBar}>
-        <input type="text" className={styles.keyword} data-keyword />
-        <input type="submit" value="Search" className={styles.searchBtn} />
+        <input
+          type="text"
+          placeholder="Country Name..."
+          className={styles.keyword}
+          data-keyword
+        />
+        {/* <input type="submit" value="Search" className={styles.searchBtn} /> */}
       </div>
 
       <div className={styles.results} data-results>

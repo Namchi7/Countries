@@ -9,6 +9,8 @@ body {
   min-width: 100vw;
   backdrop-filter: blur(10px);
   background-blend-mode: multiply;
+
+  background: linear-gradient(to bottom, rgb(255, 161, 177), rgb(255, 208, 208), rgb(215, 148, 159));
 }
 
 code {

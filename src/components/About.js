@@ -6,7 +6,7 @@ import EmailIcon from "../assets/images/email.svg";
 import { Link } from "react-router-dom";
 
 function About() {
-  document.body.style.backgroundImage = "none";
+  // document.body.style.backgroundImage = "none";
 
   const mailSubject = "LSCountry is Awesome!";
   const mailBody =
